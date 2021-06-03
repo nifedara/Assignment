@@ -2,31 +2,24 @@
 
 namespace ConsoleApp3
 {
-    /// <summary>
-    /// This program prints 1-100 using the for loop,
-    /// puts a comma btw the numbers until the last number after which it puts a fullstop.
-    /// </summary>
+    
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            int[] v = new int[100];
+            Car Toyota = new();
+
+            int amountOfGasoline = 0;
+            string amount;
+
+            Console.WriteLine("What's the amount of gasoline you want to refuel? ");
+            amount = Console.ReadLine();
+
+            amountOfGasoline = Convert.ToInt32(amount);
+
+            Toyota.refuel(amountOfGasoline);
+            Toyota.drive();
             
-            for (var i = 0; i < v.Length; i++)
-            {
-                v[i] = i + 1;
-
-                if (v[i] != 100)
-                {
-                    Console.Write("{0}, ", v[i]);
-                }
-
-                else
-                {
-                    Console.Write("{0}. ", v[i]);
-                }
-            }
-
         }
     }
 }
